@@ -61,10 +61,10 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="78C-YJ-uQh">
-                                <rect key="frame" x="0.0" y="55" width="600" height="545"/>
+                                <rect key="frame" x="0.0" y="99" width="600" height="501"/>
                                 <animations/>
                             </imageView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="0B5-Bo-MkN">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for Pokémon" translatesAutoresizingMaskIntoConstraints="NO" id="0B5-Bo-MkN">
                                 <rect key="frame" x="0.0" y="55" width="600" height="44"/>
                                 <animations/>
                                 <constraints>
@@ -132,6 +132,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="78C-YJ-uQh" firstAttribute="top" secondItem="tQK-MD-JPs" secondAttribute="bottom" id="34B-Ta-8O0"/>
+                            <constraint firstItem="78C-YJ-uQh" firstAttribute="top" secondItem="0B5-Bo-MkN" secondAttribute="bottom" id="ArR-8v-dKT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u1O-2q-wEX" secondAttribute="bottom" constant="20" id="FFM-ha-9tq"/>
                             <constraint firstItem="78C-YJ-uQh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IGa-Vf-eYX"/>
                             <constraint firstAttribute="trailing" secondItem="tQK-MD-JPs" secondAttribute="trailing" id="MJf-Ef-Hma"/>
@@ -146,9 +147,15 @@
                             <constraint firstItem="u1O-2q-wEX" firstAttribute="top" secondItem="0B5-Bo-MkN" secondAttribute="bottom" constant="20" id="wLO-1G-l0x"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="78C-YJ-uQh" secondAttribute="bottom" id="zt9-kb-OTq"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="34B-Ta-8O0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="collection" destination="u1O-2q-wEX" id="SCc-wi-shM"/>
+                        <outlet property="searchBar" destination="0B5-Bo-MkN" id="POa-uj-K6E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
