@@ -31,6 +31,42 @@ class PokemonDetailVC: UIViewController {
         super.viewDidLoad()
 
         nameLbl.text = pokemon.name
+        let img = UIImage(named: "\(pokemon.pokedexId)")
+        mainImg.image = img
+        evo1Img.image = img
+        
+        pokemon.downloadPokemonDetails { () -> () in
+            self.updateUI()
+        }
+    }
+    
+    // MARK: Functions
+    
+    func updateUI() {
+    
+        descriptionLbl.text = pokemon.description
+        
+        typeLbl.text = pokemon.type
+        
+        defenseLbl.text = pokemon.defense
+        
+        heightLbl.text = pokemon.height
+        
+        pokedexIdLbl.text = "\(pokemon.pokedexId)"
+        
+        weightLbl.text = pokemon.weight
+        
+        baseAttackLbl.text = pokemon.baseAttack
+        
+        if pokemon.nextEvolutionId == "" {
+            nextEvoLbl.text = "This pokemon have no Evolution"
+            evo2Img.hidden = true
+        } else {
+            nextEvoLbl.text = pokemon.nextEvolutionTxt
+            evo2Img.image = UIImage(named: pokemon.nextEvolutionId)
+        }
+        
+        
     }
     
     // MARK: Actions
