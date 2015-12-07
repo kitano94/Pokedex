@@ -197,6 +197,9 @@
                                             <constraint firstAttribute="height" constant="36" id="ZzK-Xa-idN"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="eeB-te-fyi" eventType="touchUpInside" id="z7W-3G-twn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -418,7 +421,18 @@ En emmagasinant de l'énergie, son bulbe grossit. Il en émane un arôme quand i
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="baseAttackLbl" destination="54k-zR-lLs" id="fA4-Ac-Fcz"/>
+                        <outlet property="defenseLbl" destination="NdM-aJ-Paa" id="1na-Uk-spW"/>
+                        <outlet property="descriptionLbl" destination="9Xi-tZ-dTw" id="G91-7U-lIK"/>
+                        <outlet property="evo1Img" destination="daq-vo-YI1" id="R6j-eF-Q4l"/>
+                        <outlet property="evo2Img" destination="kPB-Pe-O0H" id="aNg-n3-oW1"/>
+                        <outlet property="heightLbl" destination="IS2-ri-zX0" id="yX3-Zh-wei"/>
+                        <outlet property="mainImg" destination="9cw-tX-ZfU" id="jgx-jS-EYT"/>
                         <outlet property="nameLbl" destination="80J-Is-jMo" id="MWr-ey-yPX"/>
+                        <outlet property="nextEvoLbl" destination="C4l-5l-3tm" id="6XQ-4r-i23"/>
+                        <outlet property="pokedexIdLbl" destination="Rgm-b7-d0i" id="S2L-UE-tDm"/>
+                        <outlet property="typeLbl" destination="KS6-Uf-jcB" id="syf-Gl-Ioc"/>
+                        <outlet property="weightLbl" destination="tvJ-6l-iQl" id="u2q-c5-iRO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUZ-tC-L75" userLabel="First Responder" sceneMemberID="firstResponder"/>
